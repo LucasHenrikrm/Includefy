@@ -1,4 +1,4 @@
-![alt text](includefy.png)
+![alt text](Includefy.png)
 ### 🔗 Link para acesso da plataforma: 
 
 ## 📄 Descrição
