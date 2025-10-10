@@ -1,4 +1,4 @@
-<img width="54px" height="54px"  src="includefy/includefy.png" /> 
+![alt text](includefy.png)
 ### 🔗 Link para acesso da plataforma: 
 
 ## 📄 Descrição
