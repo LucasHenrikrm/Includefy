@@ -1,4 +1,5 @@
-![alt text](Includefy.png)
+<img width="100px" height="100px" ![alt text](Includefy.png) /> 
+
 ### 🔗 Link para acesso da plataforma: 
 
 ## 📄 Descrição
