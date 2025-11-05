@@ -1,3 +1,4 @@
+let Menu = false
 function abrirNav() {
     document.getElementById("menu-lateral").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
@@ -6,4 +7,15 @@ function abrirNav() {
 function fecharNav() {
     document.getElementById("menu-lateral").style.width = "0px";
     document.getElementById("main").style.marginLeft = "0px";
+}
+
+function slideMenu() {
+    if (Menu === false){
+        Menu = true
+        abrirNav()
+    }
+    else{
+        Menu = false
+        fecharNav()
+    }
 }
