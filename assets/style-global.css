@@ -2,14 +2,45 @@
 @charset "UFT-8";
 
 /*Importa fontes especiais*/
-@import url();
+/*Calibri - normal*/
+@font-face{
+    font-family: 'Calibri';
+    src: url('fonts/calibri/calibri-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 
-/*Reseta todos os parâmetros pré-definidos de todos os navegadores*/
+}
 
-* {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+/*Calibri- bold (negrito)*/
+@font-face {
+    font-family: 'Calibri';
+    src: url('fonts/calibri/calibri-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*Calibri - italic (itálico)*/
+@font-face {
+    font-family: 'Calibri';
+    src: url('fonts/calibri/calibri-italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/*Calibri - bold italic (negrito e itálico)*/
+@font-face {
+    font-family: 'Calibri';
+    src: url('fonts/calibri/calibri-bold-italic.ttf') format('truetype'); 
+    font-weight: bold;
+    font-style: italic;
+}
+
+/*Bauhaus 93*/
+@font-face {
+    font-family: 'Bauhaus';
+    src: url('fonts/Bauhaus/Bauhaus\ 93\ Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /*Variáveis dos recursos da página*/
@@ -21,7 +52,19 @@
     --cor-fundo: #EBEBEB;
 
     /*Fontes*/
+    --calibri: "Calibri", "Verdana", sans-serif;
+    --bauhaus: "Bauhaus", "Garamond", serif;
 }
+
+/*Reseta todos os parâmetros pré-definidos de todos os navegadores*/
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: var(--calibri);
+}
+
 
 #menu-superior {
     display:flex;
@@ -44,7 +87,7 @@
 }
 
 #menu-superior a:hover {
-    color: var(--cor-detalhe)
+    color: var(--cor-detalhe);
 }
 
 #nav-off-canvas {
