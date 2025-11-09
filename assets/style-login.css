@@ -17,7 +17,9 @@ h1 {
     font-size: 31px;
     font-weight: bold;
 
-    padding: 25px;
+    padding-top: 100px;
+    padding-left: 25px;
+    padding-bottom: 25px;
     
 }
 
@@ -44,6 +46,10 @@ h1 {
     box-shadow: 0px 0px 5px var(--cor-detalhe);
 }
 
+.formulario input:invalid{
+    border: 2px solid red;
+}
+
 #data-nasc {
     width: 150px;
 }
@@ -51,7 +57,6 @@ h1 {
 #check {
     display: flex;
     flex-direction: row;
-    gap: 10px;
 }
 
 #check-concordo {
@@ -61,17 +66,23 @@ h1 {
     width: 40px;
 }
 
+#check-texto {
+    padding: 10px;
+}
+
 #check-concordo:checked {
     background-color: var(--cor-detalhe);
 }
 
 p {
     font-size: 19px;
-    padding-top: 10px;
+    margin-bottom: -5px;
 }
 
 #botao-cadastrar {
+    margin-top: 50px;
     margin-left: 40%;
+    margin-bottom: 20px;
     font-size: 31px;
     font-weight: bold;
     background-color: var(--cor-detalhe);

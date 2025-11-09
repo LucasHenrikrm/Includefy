@@ -67,7 +67,10 @@
 
 
 #menu-superior {
-    display:flex;
+    background-color: var(--cor-branco);
+    position: fixed;
+    width: 100%;
+    display: flex;
     flex-direction: row;
     padding-left: 40px;
     padding-right: 40px;
@@ -75,6 +78,7 @@
     box-shadow: 0 0 0 3px var(--cor-detalhe) inset; 
     align-items: center;
     gap:5px;
+    
 }
 
 #menu-superior a {
@@ -91,7 +95,6 @@
 }
 
 #nav-off-canvas {
-
     font-size: 40px;
     cursor: pointer;
 
