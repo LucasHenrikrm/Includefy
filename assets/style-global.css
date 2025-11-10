@@ -82,16 +82,25 @@
 }
 
 #menu-superior a {
-    font-weight: 600;
+    padding: 5px;
+    text-align: center;
+
     font-size: 20px;
-    color: var(--cor-preto);
+    font-weight: bold;
+    width: 100px;
+
+    color: var(--cor-branco);
+    background-color: var(--cor-detalhe);
+    border: var(--cor-detalhe);
+    border-radius: 5px;
     text-decoration: none;
 
     transition: 0.5s;
 }
 
 #menu-superior a:hover {
-    color: var(--cor-detalhe);
+    background-color: var(--cor-fundo);
+    color: var(--cor-preto);
 }
 
 #nav-off-canvas {
@@ -158,38 +167,10 @@
     border-radius: 20px;
 }
 
-#icone-sobre {
-    max-width: 15px;
-    height: auto;
-}
-
-/* Assets da Home! ↓ */
-.nav-home {
-    display:flex;
-
-}
-.link-home {
-    font-weight: 600;
-    font-size: 16px;
-    background-color: var(--cor-branco);
-    color: var(--cor-preto);
-    box-shadow: 0 0 0 2px var(--cor-detalhe) inset;
-
-    height: 30px;
-    width: 100%;
-    
-    text-align: center;
-    text-decoration: none;
-
-    transition: 0.5s;
-
-}
-
-.link-home:hover {
-    background-color: var(--cor-detalhe);
-    color: var(--cor-branco);
-}
-
 #principal {
     transition:margin-left .5s;
+}
+
+.menu-icon {
+    max-width: 30px;
 }

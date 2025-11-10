@@ -27,26 +27,27 @@
 
             <input type="text" placeholder="Ϙ Pesquisar" class="barra-pesquisa">
 
-            <li><a href="index.html"><img src="img/icone/home-icone.png" alt="Postar">Postar</a></li>
+            <a style="cursor:pointer" onclick="document.getElementById('main-frame').src = 'public/Login/Logon.html'; return false;">Entrar</a>
+            <a style="cursor:pointer" onclick="document.getElementById('main-frame').src = 'public/Login/Cadastro.html'; return false;">Cadastrar</a>
         </nav>
 
         <!--Menu lateral off canvas-->
         <nav id="menu-lateral">
             <ul class="elementos-menu">
-                <li><a href="index.html"><img src="img/icone/home-icone.png" alt="Página Inicial">Página Inicial</a></li>
-                <li><a href="index.html"><img src="img/icone/home-icone.png" alt="Notificações">Notificações</a></li>
-                <li><a href="index.html"><img src="img/icone/home-icone.png" alt="Mensagens">Mensagens</a></li>
-                <li><a href="index.html"><img src="img/icone/home-icone.png" alt="Itens Salvos">Itens Salvos</a></li>
-                <li><a href="index.html"><img src="img/icone/home-icone.png" alt="Mapa">Mapa</a></li>
-                <li><a href="index.html"><img src="img/icone/home-icone.png" alt="Comunidades">Comunidades</a></li>
+                <li><a style="cursor:pointer" onclick="document.getElementById('main-frame').src = 'public/Home.html'; return false;"><img src="img/icone/home-icone.png" alt="Página Inicial" class="menu-icon">Página Inicial</a></li>
+                <li><a style="cursor:pointer" onclick="document.getElementById('main-frame').src = ''; return false;"><img src="img/icone/notificacao-icone.png" alt="Notificações" class="menu-icon">Notificações</a></li>
+                <li><a style="cursor:pointer" onclick="document.getElementById('main-frame').src = ''; return false;"><img src="img/icone/mensagem-icone.png" alt="Mensagens" class="menu-icon">Mensagens</a></li>
+                <li><a style="cursor:pointer" onclick="document.getElementById('main-frame').src = ''; return false;"><img src="img/icone/star-icone.png" alt="Itens Salvos" class="menu-icon">Itens Salvos</a></li>
+                <li><a style="cursor:pointer" onclick="document.getElementById('main-frame').src = ''; return false;"><img src="img/icone/mapa-icone.png" alt="Mapa" class="menu-icon">Mapa</a></li>
+                <li><a style="cursor:pointer" onclick="document.getElementById('main-frame').src = ''; return false;"><img src="img/icone/comunidade-icone.png" alt="Comunidades" class="menu-icon">Comunidades</a></li>
             </ul>
 
             <ul class="elementos-menu">
                 <hr>
                 <p>Recursos</p>
-                <li><a href="index.html"><img src="img/icone/home-icone.png" alt="Configurações">Configurações</a></li>
-                <li><a href="index.html"><img src="img/logo/simbolo-preto.png" alt="Sobre o Includefy" id="icone-sobre">Sobre o Includefy</a></li>
-                <li><a href="index.html"><img src="img/icone/home-icone.png" alt="Denúncia">Denúncia</a></li>
+                <li><a style="cursor:pointer" onclick="document.getElementById('main-frame').src = ''; return false;"><img src="img/icone/config-icone.png" alt="Configurações" class="menu-icon">Configurações</a></li>
+                <li><a style="cursor:pointer" onclick="document.getElementById('main-frame').src = ''; return false;"><img src="img/logo/icone-branco.png" alt="Sobre" class="menu-icon">Sobre o Includefy</a></li>
+                <li><a style="cursor:pointer" onclick="document.getElementById('main-frame').src = ''; return false;"><img src="img/icone/denuncia-icone.png" alt="Denunciar" class="menu-icon">Denúnciar</a></li>
             </ul>
 
         </nav>
@@ -54,11 +55,11 @@
     </header>
 
     <main id="principal">
-        <nav class="nav-home">
-            <a href="" class="link-home">Para Você</a>
-            <a href="" class="link-home">Seguindo</a>
-            <a href="" class="link-home">Em alta</a>
-        </nav>
+        <iframe id="main-frame"
+        src="https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal" 
+        width="100%"
+        height="800px"
+        frameborder="0"></iframe>
     </main>
 
     <footer>
