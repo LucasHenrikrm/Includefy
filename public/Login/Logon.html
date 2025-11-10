@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicon do site-->
+    <link rel="shortcut icon" href="../../img/logo/favicon.ico" type="image/x-icon">
+
+    <!--↓ Importanto o Bootstrap - Estilo ↓  --> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!--Importando as folhas de estilo CSS-->
+    <link rel="stylesheet" href="../../assets/style-global.css">
+    <link rel="stylesheet" href="../../assets/style-login.css">
+
+    <!--Importando funcionalidade-->
+    <script src="../../scripts/script-global.js"></script>
+    <script src="../../scripts/script-login.js" type="application/javascript"></script>
+
+</head>
+
+<body>
+    <header>
+        <!--Menu superior-->
+        <nav id="menu-superior">
+            <span id="nav-off-canvas" onclick="slideMenu()"><img src="../../img/icone/menu-icone.png" alt="Menu"></span>
+            <img src="../../img/logo/completo-color.png" alt="Logo da IncludeFy" id="logo">
+
+            <input type="text" placeholder="Ϙ Pesquisar" class="barra-pesquisa">
+
+            <li><a href="index.html"><img src="../../img/icone/home-icone.png" alt="Postar">Postar</a></li>
+        </nav>
+
+        <!--Menu lateral off canvas-->
+        <nav id="menu-lateral">
+            <ul class="elementos-menu">
+                <li><a href="index.html"><img src="../../img/icone/home-icone.png" alt="Página Inicial">Página Inicial</a></li>
+                <li><a href="index.html"><img src="../../img/icone/home-icone.png" alt="Notificações">Notificações</a></li>
+                <li><a href="index.html"><img src="../../img/icone/home-icone.png" alt="Mensagens">Mensagens</a></li>
+                <li><a href="index.html"><img src="../../img/icone/home-icone.png" alt="Itens Salvos">Itens Salvos</a></li>
+                <li><a href="index.html"><img src="../../img/icone/home-icone.png" alt="Mapa">Mapa</a></li>
+                <li><a href="index.html"><img src="../../img/icone/home-icone.png" alt="Comunidades">Comunidades</a></li>
+            </ul>
+
+            <ul class="elementos-menu">
+                <hr>
+                <p>Recursos</p>
+                <li><a href="index.html"><img src="../../img/icone/home-icone.png" alt="Configurações">Configurações</a></li>
+                <li><a href="index.html"><img src="../../img/logo/simbolo-preto.png" alt="Sobre o Includefy" id="icone-sobre">Sobre o Includefy</a></li>
+                <li><a href="index.html"><img src="../../img/icone/home-icone.png" alt="Denúncia">Denúncia</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main id="principal">
+        <h1>Entre na sua conta</h1>
+
+        <!--Formulário para login-->
+        <div class="formulario">
+            <form>
+                <label for="celular">Celular ou Nome do Usuário:</label>
+                <input type="text" class="form-control" id="usuario" size="50" placeholder="Ex.: (012)93456-7890 ou Joãozinho" required><br>
+                <label for="senha">Digite sua senha:</label>
+                <input type="password" class="form-control" id="senha" required><br>
+                <p><a href="" target="_self">Esqueceu sua senha?</a></p>
+                <p>Ainda não tem uma conta? <a href="Cadastro.html">Cadastre-se.</a></p>
+                <button type="submit" class="btn btn-primary" id="botao-cadastrar" onclick="logon()">Entrar</button>
+
+            </form>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+
+    <!-- | ↓ Importando Bootstrap - Funcionalidades ↓ | -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
