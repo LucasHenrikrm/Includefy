@@ -1,0 +1,94 @@
+/*Variáveis dos recursos da página*/
+:root {
+    /*Cores*/
+    --cor-detalhe: #fe3f6c;
+    --cor-detalhe2: #fe3f6c27;
+    --cor-detalhe3: #FF91C1;
+    --cor-branco: #FFF;
+    --cor-preto: #000000d2;
+    --cor-fundo: #D9D9D9;
+
+    /*Fontes*/
+    --calibri: "Calibri", "Verdana", sans-serif;
+    --bauhaus: "Bauhaus", "Garamond", serif;
+}
+
+h1 {
+    font-size: 31px;
+    font-weight: bold;
+
+    padding-top: 100px;
+    padding-left: 25px;
+    padding-bottom: 25px;
+    
+}
+
+.formulario {
+    margin: auto;
+    padding: 25px;
+    background-color: var(--cor-fundo);
+    border: 3px solid var(--cor-detalhe);
+    width: 70%;
+}
+
+.formulario label {
+    font-size: 31px;
+}
+
+.formulario input {
+    background-color: var(--cor-detalhe2);
+    height: 50px;
+    margin-bottom: 10px;
+    border: var(--cor-detalhe2);
+}
+
+.formulario input:focus {
+    box-shadow: 0px 0px 5px var(--cor-detalhe);
+}
+
+.formulario input:invalid{
+    border: 2px solid red;
+}
+
+#data-nasc {
+    width: 150px;
+}
+
+#check {
+    display: flex;
+    flex-direction: row;
+}
+
+#check-concordo {
+    border: 5px solid var(--cor-detalhe);
+    background-color: var(--cor-fundo);
+    height: 40px;
+    width: 40px;
+}
+
+#check-texto {
+    padding: 10px;
+}
+
+#check-concordo:checked {
+    background-color: var(--cor-detalhe);
+}
+
+p {
+    font-size: 19px;
+    margin-bottom: -5px;
+}
+
+#botao-cadastrar {
+    margin-top: 50px;
+    margin-left: 40%;
+    margin-bottom: 20px;
+    font-size: 31px;
+    font-weight: bold;
+    background-color: var(--cor-detalhe);
+    border: var(--cor-detalhe);
+}
+
+#botao-cadastrar:hover {
+    background-color: var(--cor-detalhe3);
+}
