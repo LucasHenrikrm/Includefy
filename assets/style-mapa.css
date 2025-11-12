@@ -13,14 +13,28 @@
     --bauhaus: "Bauhaus", "Garamond", serif;
 }
 
-#mapa-principal {
-    overflow: hidden;
-    position: relative;
-    height: 0;
+.principal {
 }
 
-#mapa-principal iframe {
-    height: 100%;
+#mapa-principal {
     width: 100%;
+    height: 100%;
     position: absolute;
+}
+
+#menu-suspenso {
+    background-color: var(--cor-detalhe);
+    width: 350px;
+    border-radius: 50px;
+    position: relative;
+    margin: auto;
+    top: 470px;
+}
+
+#menu-suspenso ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
