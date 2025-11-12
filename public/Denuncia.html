@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicon do site-->
+    <link rel="shortcut icon" href="../../img/logo/favicon.ico" type="image/x-icon">
+
+    <!--↓ Importanto o Bootstrap - Estilo ↓  --> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!--Importando as folhas de estilo CSS-->
+    <link rel="stylesheet" href="../assets/style-global.css">
+    <link rel="stylesheet" href="../assets/module-form.css">
+    <link rel="stylesheet" href="../assets/style-denuncia.css">
+
+    <!--Importando funcionalidade-->
+    <script src="../scripts/script-global.js"></script>
+
+</head>
+
+<body>
+
+    <main id="principal">
+        <h1 class="titulo">Denúncia</h1>
+        <hr>
+        <div class="formulario">
+            <div id="check-box">
+                <input type="checkbox" class="form-check-input check" id="check-anonimo">
+                <span id="check-texto">Anônimo</span>
+            </div>
+            <div class="input-group form-input">
+                <span class="input-group-text">Nome do usuário:</span>
+                <input type="text" class="form-control input-box" placeholder="@Novousuario123">
+            </div>
+            <div class="input-group form-input">
+                <span class="input-group-text">Localização:</span>
+                <input type="text" class="form-control input-box" placeholder="No perfil do usuário @XXX">
+            </div>
+            <div class="input-group form-input">
+                <span class="input-group-text">Como se identifica:</span>
+                <input type="text" class="form-control input-box" placeholder="ele/ela/dele/dela">
+            </div>
+            <div class="input-group form-input">
+                <span class="input-group-text">Tipo:</span>
+                <select name="" class="form-select input-box" id="">
+                    <option selected value="">Erro na plataforma</option>
+                    <option value="">Viola as regras de conduta</option>
+                    <option value="">Homofobia</option>
+                    <option value="">Transfobia</option>
+                    <option value="">Assédio</option>
+                    <option value="">Ameaça física</option>
+                    <option value="">Ódio</option>
+                    <option value="">Racismo</option>
+                    <option value="">Transação ilícita</option>
+                    <option value="">Falsidade ideológica</option>
+                    <option value="">Automutilação ou suicídio</option>
+                </select>
+            </div>
+            <div class="input-group form-input">
+                <span class="input-group-text">Descrição:</span>
+                <textarea class="form-control input-box" rows="10"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary botao-enviar">Enviar</button>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+
+    <!-- | ↓ Importando Bootstrap - Funcionalidades ↓ | -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
