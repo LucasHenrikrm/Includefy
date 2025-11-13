@@ -31,19 +31,19 @@
             </div>
             <div class="input-group form-input">
                 <span class="input-group-text">Nome do usuário:</span>
-                <input type="text" class="form-control input-box" placeholder="@Novousuario123">
+                <input type="text" class="form-control input-box" id="nome-usuario" placeholder="@Novousuario123" required>
             </div>
             <div class="input-group form-input">
                 <span class="input-group-text">Localização:</span>
-                <input type="text" class="form-control input-box" placeholder="No perfil do usuário @XXX">
+                <input type="text" class="form-control input-box" id="localizacao" placeholder="No perfil do usuário @XXX" required>
             </div>
             <div class="input-group form-input">
                 <span class="input-group-text">Como se identifica:</span>
-                <input type="text" class="form-control input-box" placeholder="ele/ela/dele/dela">
+                <input type="text" class="form-control input-box" id="identificacao" placeholder="ele/ela/dele/dela" required>
             </div>
             <div class="input-group form-input">
                 <span class="input-group-text">Tipo:</span>
-                <select name="" class="form-select input-box" id="">
+                <select name="" class="form-select input-box" id="tipo-denuncia" required>
                     <option selected value="">Erro na plataforma</option>
                     <option value="">Viola as regras de conduta</option>
                     <option value="">Homofobia</option>
@@ -59,9 +59,9 @@
             </div>
             <div class="input-group form-input">
                 <span class="input-group-text">Descrição:</span>
-                <textarea class="form-control input-box" rows="10"></textarea>
+                <textarea class="form-control input-box" rows="10" id="descricao" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary botao-enviar">Enviar</button>
+            <button type="submit" class="btn btn-primary botao-enviar" onclick="enviarDenuncia()">Enviar</button>
         </div>
     </main>
 
