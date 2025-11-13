@@ -13,6 +13,16 @@
     --bauhaus: "Bauhaus", "Garamond", serif;
 }
 
+h1 {
+    font-size: 31px;
+    font-weight: bold;
+
+    padding-top: 100px;
+    padding-left: 25px;
+    padding-bottom: 25px;
+    
+}
+
 #mapa-principal {
     width: 100%;
     height: 100%;
