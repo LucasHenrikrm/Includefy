@@ -6,8 +6,8 @@ html, body {
     min-height: 100%;
 }
 
-body {
-    marigin-top:25px;
+.container-bloco {
+    margin-top: 60px;
 }
 
 .nav-home {
@@ -53,4 +53,3 @@ body {
     height: calc(100 vh - 75px);
 
 }
-
