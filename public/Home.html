@@ -14,19 +14,20 @@
 
 </head>
 <body>
-    <header>
-        <nav class="nav-home">
-            <a style="cursor:pointer" class="link-home" onclick="document.getElementById('home-frame').src ='Home-Pages/ForYou.html'; return false;">Para Você</a>
-            <a style="cursor:pointer" class="link-home" onclick="document.getElementById('home-frame').src ='Home-Pages/Seguindo.html'; return false;">Seguindo</a>
-            <a style="cursor:pointer" class="link-home" onclick="document.getElementById('home-frame').src ='Home-Pages/Em-Alta.html'; return false;">Em alta</a>
-        </nav>
-
-    </header>
-    <main id="pag-home">
-        <iframe id="home-frame" 
-        src="Home-Pages/ForYou.html"></iframe>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../scripts/script-home.js"></script>
-    </main>
+    <div class="container-bloco">
+        <header>
+            <nav class="nav-home">
+                <a style="cursor:pointer" class="link-home" onclick="document.getElementById('home-frame').src ='Home-Pages/ForYou.html'; return false;">Para Você</a>
+                <a style="cursor:pointer" class="link-home" onclick="document.getElementById('home-frame').src ='Home-Pages/Seguindo.html'; return false;">Seguindo</a>
+                <a style="cursor:pointer" class="link-home" onclick="document.getElementById('home-frame').src ='Home-Pages/Em-Alta.html'; return false;">Em alta</a>
+            </nav>
+        </header>
+        <main id="pag-home">
+            <iframe id="home-frame"
+            src="Home-Pages/ForYou.html"></iframe>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../scripts/script-home.js"></script>
+        </main>
+    </div>
 </body>
 </html>
