@@ -6,6 +6,10 @@ html, body {
     min-height: 100%;
 }
 
+body {
+    marigin-top:25px;
+}
+
 .nav-home {
     display: flex;
     width: 100%;
@@ -43,10 +47,10 @@ html, body {
     margin:20px;
     margin-left:160px;
     margin-right:160px;
-    margin-top:55px;
     box-shadow: 0 0 0 2px var(--cor-detalhe) inset;
     overflow: hidden;
     position: relaive;
     height: calc(100 vh - 75px);
 
 }
+
