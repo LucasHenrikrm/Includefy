@@ -1,0 +1,157 @@
+/* ESTILO COMUNIDADES */
+
+.pagina-comunidades {
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+    font-family: var(--calibri);
+}
+
+/* Bloco Popular */
+.container-bloco {
+    border: 4px solid var(--cor-detalhe);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+.titulo-bloco {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.grade-populares {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card-pop {
+    background: var(--cor-detalhe2);
+    padding: 15px;
+    border-radius: 12px;
+    border: 3px solid var(--cor-detalhe);
+    text-align: center;
+}
+
+.card-pop img {
+    width: 120px;
+    margin-bottom: 2px;
+    float: left;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+.card-pop .nome {
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.card-pop .membros {
+    font-size: 14px;
+}
+
+/* Card Grande das Comunidades */
+.comunidade-card {
+    border: 4px solid var(--cor-detalhe);
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 60px;
+    background: #fff;
+    position: relative;
+}
+
+.btn-participar {
+    background: var(--cor-detalhe);
+    border: none;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.logo-container {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.logo-comunidade {
+    width: 110px;
+}
+
+.titulo-comunidade {
+    font-size: 30px;
+    font-family: 'Bauhaus';
+    margin-top: 20px;
+    color: var(--cor-detalhe);
+}
+
+.descricao-bloco {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    border: 3px solid var(--cor-detalhe);
+    padding: 15px;
+    border-radius: 10px;
+    font-family: 'Calibri';
+}
+
+.descricao-bloco .texto {
+    width: 60%;
+}
+
+.descricao-bloco .info {
+    width: 35%;
+    font-size: 16px;
+}
+
+/* Fórum */
+.forum-bloco {
+    margin-top: 25px;
+    border: 3px solid var(--cor-detalhe);
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.topico {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--cor-detalhe);
+    padding: 10px 0;
+}
+
+.topico img {
+    width: 60px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.topico .txt p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.topico small {
+    font-size: 12px;
+    color: #444;
+}
+
+.seta {
+    margin-left: auto;
+    font-size: 18px;
+}
+
+/* Ações */
+.acoes {
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.acoes img {
+    width: 28px;
+    cursor: pointer;
+}
