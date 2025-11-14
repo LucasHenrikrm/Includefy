@@ -1,0 +1,50 @@
+/*Variáveis dos recursos da página*/
+html, body {
+    margin: 0;
+    padding: 0;
+    height: auto !important; /* Força altura automática */
+    min-height: 100%;
+}
+
+.nav-home {
+    display: flex;
+    width: 100%;
+}
+.link-home {
+    font-weight: 600;
+    font-size: 16px;
+    background-color: var(--cor-branco);
+    color: var(--cor-preto);
+    box-shadow: 0 0 0 2px var(--cor-detalhe) inset;
+
+    height: 30px;
+    width: 100%;
+    
+    text-align: center;
+    text-decoration: none;
+
+    transition: 0.5s;
+}
+
+.link-home:hover, .link-home.selecionado {
+    background-color: var(--cor-detalhe);
+    color: var(--cor-branco);
+}
+
+#home-frame {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+    overflow-y: auto;
+}
+
+#pag-home {
+    margin:20px;
+    margin-left:160px;
+    margin-right:160px;
+    box-shadow: 0 0 0 2px var(--cor-detalhe) inset;
+    overflow: hidden;
+    position: relaive;
+    height: calc(100 vh - 75px);
+}
