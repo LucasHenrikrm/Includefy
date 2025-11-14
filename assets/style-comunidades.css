@@ -1,7 +1,7 @@
 /* ESTILO COMUNIDADES */
 
 .pagina-comunidades {
-    margin-top: 125px;
+    padding-top: 125px;
     width: 90%;
     margin: auto;
     padding: 20px 0;
@@ -156,5 +156,6 @@
     width: 28px;
     cursor: pointer;
 }
+
 
 
