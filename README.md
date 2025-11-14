@@ -2,7 +2,7 @@
 
 ## Projeto Integrador do curso de Desenvolvimento de Softwares Multiplataforma da FATEC Luigi Papaiz
 
-### 🔗 Link para acesso da plataforma: [Includefy](/https://lucasHenrikrm.github.io/Includefy/)
+### 🔗 Link para acesso da plataforma: [Includefy](https://lucasHenrikrm.github.io/Includefy/)
 ### 🗎 Link para a documentação: [Documentação]
 
 ## 📄 Descrição
