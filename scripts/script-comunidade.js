@@ -4,8 +4,10 @@ function participarComunidade(){
         Swal.fire({
         title: "Sucesso!",
         text: "Agora você está participando desta comunidade.",
-        icon: "success"
+        icon: "success",
+        confirmButtonColor: "#fe3f6c"
         });
     }
     alertaParticiparComunidade();
 }
+
