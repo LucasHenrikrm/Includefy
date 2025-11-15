@@ -82,14 +82,15 @@ function cadastrar(event) {
             function alertaCadastro(){
                 Swal.fire({
                 title: "Sucesso!",
-                text: "Cadastro efetuado com sucesso!",
-                icon: "success"
-                });
-            }
-            alertaCadastro();
-            setTimeout(function(){
+                text: "Usuário cadastrado com sucesso!",
+                icon: "success",
+                confirmButtonColor: "#fe3f6c",
+            }).then((result) => {
+            // Redireciona quando o usuário clicar em OK
                 window.location.href = "Logon.html";
-            }, 3000)
+            });
+        }
+            alertaCadastro();
 
             //Envia para a página de confirmação de telefone
             //Envia código para o telefone
@@ -111,6 +112,8 @@ function cadastrar(event) {
         console.log("O cliente não marcou o checkbox");
         limparCampos();
     }
+
+    return false;
 
 }
 
@@ -160,7 +163,8 @@ function logon(event) {
             Swal.fire({
             title: "Sucesso!",
             text: "Login efetuado com sucesso!",
-            icon: "success"
+            icon: "success",
+            confirmButtonColor: "#fe3f6c"
         });
     }
         alerta();
