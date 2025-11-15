@@ -19,6 +19,7 @@
 
 <div class="pagina-comunidades">
 
+    <a href="Criar-comunidades.html"><button class="btn btn-primary" id="criar-comunidades">Criar comunidade</button></a>
     <!-- Seção Comunidades Populares -->
     <section class="container-bloco">
         <h2 class="titulo-bloco">Comunidades Populares</h2>
@@ -27,42 +28,47 @@
 
             <!-- Item 1 -->
             <div class="card-pop">
-                <img src="../img/img comun/odeio.jpeg">
+                <img src="../img/img comun/odeio.jpeg" alt="Eu odeio acordar cedo">
                 <p class="nome">Eu odeio acordar cedo</p>
                 <p class="membros">Membros: 300 mil</p>
             </div>
 
             <!-- Item 2 -->
+            
             <div class="card-pop">
-                <img src="../img/logo/icone-color.png">
-                <p class="nome">Includefy Oficial</p>
-                <p class="membros">Membros: 640 mil</p>
+                <a class="link-comunidade" href="#comunidade-includefy">
+                    <img src="../img/logo/icone-color.png" alt="Includefy">
+                    <p class="nome">Includefy Oficial</p>
+                    <p class="membros">Membros: 640 mil</p>
+                </a>
             </div>
 
             <!-- Item 3 -->
             <div class="card-pop">
-                <img src="../img/img comun/b3.png">
+                <img src="../img/img comun/b3.png" alt="B3 Oficial">
                 <p class="nome">B3 Oficial</p>
                 <p class="membros">Membros: 81 mil</p>
             </div>
 
             <!-- Item 4 -->
             <div class="card-pop">
-                <img src="../img/img comun/gpt.png">
+                <img src="../img/img comun/gpt.png" alt="ChatGPT">
                 <p class="nome">ChatGPT</p>
                 <p class="membros">Membros: 47 mil</p>
             </div>
 
             <!-- Item 5 -->
             <div class="card-pop">
-                <img src="../img/img comun/among.webp">
-                <p class="nome">Among Us</p>
-                <p class="membros">Membros: 98 mil</p>
+                <a href="#comunidade-among">
+                    <img src="../img/img comun/among.webp" alt="Among Us">
+                    <p class="nome">Among Us</p>
+                    <p class="membros">Membros: 98 mil</p>
+                </a>
             </div>
 
             <!-- Item 6 -->
             <div class="card-pop">
-                <img src="../img/img comun/you.jpg">
+                <img src="../img/img comun/you.jpg" alt="Youtube">
                 <p class="nome">YouTube</p>
                 <p class="membros">Membros: 69 mil</p>
             </div>
@@ -73,10 +79,10 @@
     <section>
 
         <!-- MODELO 1 -->
-        <div class="comunidade-card">
-            <button class="btn-participar">Participar</button>
+        <div class="comunidade-card" id="comunidade-includefy">
+            <button class="btn-participar" onclick="participarComunidade()">Participar</button>
             <div class="logo-container">
-                <img src="../img/logo/icone-color.png" class="logo-comunidade">
+                <img src="../img/logo/icone-color.png" class="logo-comunidade" alt="Includfy Logo">
             </div>
 
             <h2 class="titulo-comunidade">Includefy</h2>
@@ -84,11 +90,11 @@
             <div class="descricao-bloco">
                 <div class="texto">
                     <h3><b>Descrição</b></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque neque, aspernatur facere cumque possimus excepturi ducimus quo accusamus ipsam tempore quis numquam illo, dignissimos voluptatum dolores pariatur amet velit inventore!</p>
+                    <p>Includefy é uma plataforma de rede social com o intuito principal de conectar pessoas da comunidade LGBTQIA+ em um abiente virtual moderno, seguro e acolhedor.</p>
                 </div>
 
                 <div class="info">
-                    <p><b>Membros:</b> 500.000</p>
+                    <p><b>Membros:</b> 640.000</p>
                     <p><b>Categoria:</b> Rede Social</p>
                     <p><b>Tipo:</b> Publico</p>
                 </div>
@@ -101,8 +107,8 @@
                 <div class="topico">
                     <img src="../img/img comun/perf1.jpg">
                     <div class="txt">
-                        <p>Tema_Tema</p>
-                        <small>Descrição...</small>
+                        <p>Melhor rede social de todas!!</p>
+                        <small>Quero saber qual é a opinião de vocês sobre essa nova rede social!!</small>
                     </div>
                     <span class="seta">▼</span>
                 </div>
@@ -110,8 +116,8 @@
                 <div class="topico">
                     <img src="../img/img comun/perf2.jpeg">
                     <div class="txt">
-                        <p>Tema_Tema</p>
-                        <small>Descrição...</small>
+                        <p>Apresentações</p>
+                        <small>Vocês querem conhecer novas pessoas? Compartilhem seus gostos e interesses aqui embaixo!</small>
                     </div>
                     <span class="seta">▼</span>
                 </div>
@@ -119,8 +125,8 @@
                 <div class="topico">
                     <img src="../img/img comun/perf3.jpg">
                     <div class="txt">
-                        <p>Tema_Tema</p>
-                        <small>Descrição...</small>
+                        <p>Sugestões para a rede social</p>
+                        <small>Alguém tem novas sugestões para essa rede social?</small>
                     </div>
                     <span class="seta">▼</span>
                 </div>
@@ -128,9 +134,84 @@
             </div>
 
             <div class="acoes">
-                <img src="../img/">
-                <img src="../img/">
-                <img src="../img/">
+                <div class="acoes1">
+                    <img src="../img/icone/like-icone.png" alt="Gostei"><span>999</span>
+                    <img src="../img/icone/mensagem-icone.png" alt="Mensagens"><span>999</span>
+                    <img src="../img/icone/compartilhar-icone.png">
+                </div>
+                <div class="acoes2">
+                    <img src="../img/icone/star-icone.png" alt="Salvar">
+                    <img src="../img/icone/mais-icone.png" alt="Mais opções">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- MODELO 2 -->
+        <div class="comunidade-card" id="comunidade-includefy">
+            <button class="btn-participar" onclick="participarComunidade()">Participar</button>
+            <div class="logo-container">
+                <img src="../img/img comun/among.webp" class="logo-comunidade" alt="Among Us Logo" style="border-radius: 10px;">
+            </div>
+
+            <h2 class="titulo-comunidade">Among Us</h2>
+
+            <div class="descricao-bloco" id="comunidade-among">
+                <div class="texto">
+                    <h3><b>Descrição</b></h3>
+                    <p>Among Us é um jogo eletrônico online, dos gêneros jogo em grupo e sobrevivência, desenvolvido e publicado pelo estúdio de jogos estadunidense InnerSloth.</p>
+                </div>
+
+                <div class="info">
+                    <p><b>Membros:</b> 98.000</p>
+                    <p><b>Categoria:</b> Jogos</p>
+                    <p><b>Tipo:</b> Publico</p>
+                </div>
+            </div>
+
+            <div class="forum-bloco">
+
+                <h3><b>Fórum</b></h3>
+
+                <div class="topico">
+                    <img src="../img/img comun/perf1.jpg">
+                    <div class="txt">
+                        <p>Quem joga Among Us?</p>
+                        <small>Coloquem seus perfis no Among Us!</small>
+                    </div>
+                    <span class="seta">▼</span>
+                </div>
+
+                <div class="topico">
+                    <img src="../img/img comun/perf2.jpeg">
+                    <div class="txt">
+                        <p>Grupo de Jogatina</p>
+                        <small>Quem quer jogar todo domingo às 20h?</small>
+                    </div>
+                    <span class="seta">▼</span>
+                </div>
+
+                <div class="topico">
+                    <img src="../img/img comun/perf3.jpg">
+                    <div class="txt">
+                        <p>Novo filme?</p>
+                        <small>Ouvi boatos que vai te rum filme do Among Us. Alguém confirma?</small>
+                    </div>
+                    <span class="seta">▼</span>
+                </div>
+
+            </div>
+
+            <div class="acoes">
+                <div class="acoes1">
+                    <img src="../img/icone/like-icone.png" alt="Gostei"><span>999</span>
+                    <img src="../img/icone/mensagem-icone.png" alt="Mensagens"><span>999</span>
+                    <img src="../img/icone/compartilhar-icone.png">
+                </div>
+                <div class="acoes2">
+                    <img src="../img/icone/star-icone.png" alt="Salvar">
+                    <img src="../img/icone/mais-icone.png" alt="Mais opções">
+                </div>
             </div>
 
         </div>
@@ -138,6 +219,9 @@
     </section>
 
 </div>
+
+<script src="../scripts/script-comunidade.js"></script>
+<script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.26.3/dist/sweetalert2.all.min.js "></script>
 
 </body>
 </html>
