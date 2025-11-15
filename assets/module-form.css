@@ -1,11 +1,14 @@
+/*Personaliza todos os formulários padrões (salvo login e cadastro) do site*/
+
 /*Variáveis dos recursos da página*/
 :root {
     /*Cores*/
     --cor-detalhe: #fe3f6c;
-    --cor-detalhe2: #fe3f6c27;
-    --cor-detalhe3: #FF91C1;
+    --cor-hover: #FE7F9D;
+    --cor-ativa: #740002;
     --cor-branco: #FFF;
     --cor-preto: #000000d2;
+    --cor-preto2: #00000098; /*Cor das bordas*/
     --cor-fundo: #D9D9D9;
 
     /*Fontes*/
@@ -17,7 +20,7 @@ h1 {
     font-size: 31px;
     font-weight: bold;
     padding-top: 10px;
-    margin-left: 20px;
+    padding-left: 10px;
 }
 
 hr {
@@ -28,7 +31,7 @@ hr {
 }
 
 .formulario {
-    border: 3px solid var(--cor-detalhe);
+    border: 3px solid var(--cor-preto2);
     border-radius: 20px;
     margin: 20px;
     padding-bottom: 30px;
@@ -40,7 +43,7 @@ hr {
 
 .form-input {
     margin: 10px;
-    border: 2px solid var(--cor-detalhe);
+    border: 2px solid var(--cor-preto2);
     border-radius: 10px;
     width: 95%;
 }
@@ -52,13 +55,16 @@ hr {
 .botao-enviar {
     background-color: var(--cor-detalhe);
     border: var(--cor-detalhe);
-    margin-left: 90%;
+    margin-left: 91%;
     font-weight: 700;
 }
 
 .botao-enviar:hover {
-    background-color: var(--cor-detalhe3);
-    
+    background-color: var(--cor-hover);
+}
+
+.botao-enviar:active {
+    background-color: var(--cor-ativa);
 }
 
 .check {

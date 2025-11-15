@@ -78,8 +78,19 @@ function cadastrar(event) {
 
             localStorage.setItem("dados", json);
 
-            alert("Cadastro efetuado com sucesso!");
             console.log("Sucesso!");
+            function alertaCadastro(){
+                Swal.fire({
+                title: "Sucesso!",
+                text: "Usuário cadastrado com sucesso!",
+                icon: "success",
+                confirmButtonColor: "#fe3f6c",
+            }).then((result) => {
+            // Redireciona quando o usuário clicar em OK
+                window.location.href = "Logon.html";
+            });
+        }
+            alertaCadastro();
 
             //Envia para a página de confirmação de telefone
             //Envia código para o telefone
@@ -101,6 +112,8 @@ function cadastrar(event) {
         console.log("O cliente não marcou o checkbox");
         limparCampos();
     }
+
+    return false;
 
 }
 
@@ -146,8 +159,18 @@ function logon(event) {
     const resultado = validarLogin(usuario, senha, ds);
 
     if(resultado === true){
-        alert("Login efetuado com sucesso!");
-        window.location.href = "../../index.html";
+        function alerta(){
+            Swal.fire({
+            title: "Sucesso!",
+            text: "Login efetuado com sucesso!",
+            icon: "success",
+            confirmButtonColor: "#fe3f6c"
+        });
+    }
+        alerta();
+        setTimeout(function(){
+            window.location.href = "../Home.html";
+        }, 3000)
         return true;
     }
     else {

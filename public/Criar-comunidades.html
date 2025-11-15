@@ -16,58 +16,51 @@
 
     <!--Importando funcionalidade-->
     <script src="../scripts/script-global.js"></script>
-    <script src="../scripts/script-denuncia.js"></script>
 
 </head>
 
 <body>
 
     <main id="principal">
-        <h1 class="titulo">Denúncia</h1>
+        <h1 class="titulo">Crie uma nova comunidade</h1>
         <hr>
         <div class="formulario">
-            <div id="check-box">
-                <input type="checkbox" class="form-check-input check" id="check-anonimo">
-                <span id="check-texto">Anônimo</span>
-            </div>
             <div class="bloco-obrigatorio" style="margin-top: 10px;"><span class="obrigatorio" style="margin-left: 10px; padding-top: 20px;">*</span><span></span>Obrigatório</span></div>
             <div class="input-group form-input">
-                <span class="input-group-text">Nome do usuário:</span>
-                <input type="text" class="form-control input-box" id="nome-usuario" placeholder="@Novousuario123">
+                <span class="input-group-text">Nome do criador:<span class="obrigatorio" title="Obrigatório">*</span></span>
+                <input type="text" class="form-control input-box" id="nome-usuario" placeholder="@Novousuario123" required>
             </div>
             <div class="input-group form-input">
-                <span class="input-group-text">Localização:<span class="obrigatorio" title="Obrigatório">*</span></span>
-                <input type="text" class="form-control input-box" id="localizacao" placeholder="No perfil do usuário @XXX" required>
+                <span class="input-group-text">Nome da comunidade:<span class="obrigatorio" title="Obrigatório">*</span></span>
+                <input type="text" class="form-control input-box" id="tit-comunidade" placeholder="Ordem Paranormal" required>
             </div>
             <div class="input-group form-input">
-                <span class="input-group-text">Como se identifica:</span>
-                <input type="text" class="form-control input-box" id="identificacao" placeholder="ele/ela/dele/dela">
+                <span class="input-group-text">Categoria:<span class="obrigatorio" title="Obrigatório">*</span></span>
+                <select name="" class="form-select input-box" id="tipo-comunidade" required>
+                    <option selected value="">Artesanato</option>
+                    <option value="">Bares</option>
+                    <option value="">Comida e bebida</option>
+                    <option value="">Hobbies</option>
+                    <option value="">Jogos</option>
+                    <option value="">Rede social</option>
+                </select>
             </div>
             <div class="input-group form-input">
                 <span class="input-group-text">Tipo:<span class="obrigatorio" title="Obrigatório">*</span></span>
-                <select name="" class="form-select input-box" id="tipo-denuncia" required>
-                    <option selected value="Erro na Plataforma">Erro na plataforma</option>
-                    <option value="Violação de regras de conduta">Viola as regras de conduta</option>
-                    <option value="Homofobia">Homofobia</option>
-                    <option value="Transfobia">Transfobia</option>
-                    <option value="Assédio">Assédio</option>
-                    <option value="Ameaça física">Ameaça física</option>
-                    <option value="Ódio">Ódio</option>
-                    <option value="Racismo">Racismo</option>
-                    <option value="Transação ilícita">Transação ilícita</option>
-                    <option value="Falsidade ideológica">Falsidade ideológica</option>
-                    <option value="Automutilação ou suicídio">Automutilação ou suicídio</option>
+                <select name="" class="form-select input-box" id="tipo-publico" required>
+                    <option selected value="">Público</option>
+                    <option value="">Privado</option>
                 </select>
+            </div>
+            <div class="input-group mb-3 form-input">
+                <span class="input-group-text" for="multimidia">Imagem de capa:</span>
+                <input type="file" class="form-control input-box" id="multimidia">
             </div>
             <div class="input-group form-input">
                 <span class="input-group-text">Descrição:<span class="obrigatorio" title="Obrigatório">*</span></span>
                 <textarea class="form-control input-box" rows="10" id="descricao" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary botao-enviar" onclick="enviarDenuncia()">Enviar</button>
-        </div>
-
-        <div class="container-denuncia">
-            <!--Denúncias via JS-->
+            <button type="submit" class="btn btn-primary botao-enviar" onclick="criarComunidade()">Criar</button>
         </div>
     </main>
 
@@ -80,6 +73,9 @@
     <!-- | ↓ Importando Bootstrap - Funcionalidades ↓ | -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+
+    <!--Scripts de alerta-->
+    <script src="../scripts/script-comunidade.js"></script>
     <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.26.3/dist/sweetalert2.all.min.js "></script>
 
 </body>

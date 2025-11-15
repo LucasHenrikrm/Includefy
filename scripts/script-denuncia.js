@@ -1,29 +1,64 @@
-//Cria o banco de dados de Denuncia
+// Cria o banco de dados de Denúncia
 let denunciaDados = [];
 
-//Inicializa o banco de dados se não existir
-function carregarDados(){
-    //Verifica se  já existe dados no localStorage
-    if (!localStorage.getItem("dados")){
-        let ds = [
-            //Dados dos administradores do sistema
-            {id:1, celLogin:"011962827520", pass:"123", nUser:"Leo", dataNasc:"00/00/0000", tipoCta:"admin"},
+// Inicializa e carrega as denúncias do localStorage
+function carregarDenuncias() {
+    // Verifica se já existe dados no localStorage
+    if (!localStorage.getItem("denuncias")) {
+        denunciaDados = [];
+        // Transforma os dados em JSON e salva
+        let json = JSON.stringify(denunciaDados);
+        localStorage.setItem("denuncias", json);
+    } else {
+        // Carrega os dados existentes do localStorage
+        let json = localStorage.getItem("denuncias");
+        denunciaDados = JSON.parse(json);
+    }
+
+    // Exibe as denúncias na página
+    exibirDenuncias();
+}
+
+// Exibe as denúncias cadastradas
+function exibirDenuncias() {
+    const divDenuncia = document.querySelector('.container-denuncia');
+    
+    if (!divDenuncia) return;
+
+    // Verifica se há denúncias cadastradas
+    if (denunciaDados.length === 0) {
+        divDenuncia.innerHTML = '<div style="text-align: center; padding: 20px; margin-top: 30px;"><h1>Ainda não há denúncias registradas.</h1></div>';
+    } else {
+        let html = '<div id="denuncias" style="width: 95%; margin-top: 30px; margin-left: 20px;"><h1>Denúncias Cadastradas</h1><hr style="width: 95%; margin-left:0px">';
         
-        ];
-        //Transforma os dados acima em JSON
-        let json = JSON.stringify(ds);
+        // Percorre todas as denúncias e cria o HTML (mais recentes primeiro)
+        denunciaDados.slice().reverse().forEach((denuncia) => {
+            html += `
+                <div class="card-denuncia" style="width: 95%; border: 2px solid #00000098; padding: 20px; margin: 15px 0; border-radius: 8px; background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <div style="margin-bottom: 10px;">
+                        <strong style="color: #fe3f6c;">Denúncia #${denuncia.id}</strong>
+                        ${denuncia.data ? `<span style="float: right; color: #666; font-size: 0.9em;">${denuncia.data}</span>` : ''}
+                    </div>
+                    <p><strong>Usuário:</strong> ${denuncia.nUser || 'Anônimo'}</p>
+                    <p style="color: #740002;">&#11044; Em andamento</p>
+                    <p><strong>Localização:</strong> ${denuncia.localizacao}</p>
+                    ${denuncia.identificacao ? `<p><strong>Como se identifica:</strong> ${denuncia.identificacao}</p>` : ''}
+                    <p><strong>Tipo de Denúncia:</strong> ${denuncia.tpDenuncia}</p>
+                    <p><strong>Descrição:</strong></p>
+                    <p style="background-color: white; padding: 10px; border-radius: 5px; border: 2px solid #0000003d; white-space: pre-wrap;">${denuncia.descricao}</p>
+                    <button onclick="excluirDenuncia(${denuncia.id})" class="btn btn-danger btn-sm" style="margin-top: 10px;">Excluir Denúncia</button>
+                </div>
+            `;
+        });
         
-        //Carrega os dados do banco de dados
-        localStorage.setItem("dados",json);
+        html += '</div>';
+        divDenuncia.innerHTML = html;
     }
 }
 
-//Chama a inicialização quando a página carrega
-document.addEventListener('DOMContentLoaded', carregarDados);
-
-//Limpa os campos do formulário
-function limparCampos(){
-    document.querySelector('#check-anonimo').value = '';
+// Limpa os campos do formulário
+function limparCampos() {
+    document.querySelector('#check-anonimo').checked = false;
     document.querySelector('#nome-usuario').value = '';
     document.querySelector('#localizacao').value = '';
     document.querySelector('#identificacao').value = '';
@@ -31,163 +66,134 @@ function limparCampos(){
     document.querySelector('#descricao').value = '';
 }
 
-//Cria um registro de denúncia
-function enviarDenuncia(){
-    // Impedir o recarregamento da página se for um evento de formulário
-    if (event && event.preventDefault) {
-        event.preventDefault();
-    }
-
-    //Coleta os dados do form de denúncia
-    let anonimo = document.querySelector('#check-anonimo');
-
-    if (!anonimo.checked){
-        let nUsuario = document.querySelector('#nome-usuario').value.trim();
-    }
-
-    let local = document.querySelector('#localizacao').value.trim();
-    let ident = document.querySelector('#identificacao').value.trim();
-    //trim() apaga os espaços em branco deixados no campo do formulário
-    let tipo = document.querySelector('#tipo-denuncia').value;
-    let desc = document.querySelector('#descricao').value;
-
-    let cadastro = {id:Date.now(), nUser:nUsuario, localizacao:local, identificacao:ident, tpDenuncia:tipo, descricao:desc};
-
-    denunciaDados.push(cadastro);
-
-    localStorage.setItem("dados", json);
-    alert("Denúncia registrada com sucesso!");
-    console.log("Sucesso!");
-
-}
-
-//(C)reate da sigla CRUD
-//Cria um registro do usuário
-function cadastrar(event) {
-    // Impedir o recarregamento da página se for um evento de formulário
-    if (event && event.preventDefault) {
-        event.preventDefault();
-    }
-    //Inicializar dados se necessárui
-    carregarDados();
-
-    //Puxa o banco de dados
-    let ds = JSON.parse(localStorage.getItem("dados"));
-
-    //Coleta os dados do form de cadastro
-    let nUsuario = document.querySelector('#nome-usuario').value.trim();
-    let celular = document.querySelector('#celular').value.trim();
-    //trim() apaga os espaços em branco deixados no campo do formulário
-    let dtNasc = document.querySelector('#data-nasc').value;
-    let sen = document.querySelector('#senha').value;
-    let conc = document.querySelector('#check-concordo');
-
-    if(conc.checked) {
-        console.log("O cliente marcou o checkbox");
-        const exist = conferirExist(nUsuario, celular, ds);
-
-        if(exist === true){
-            let cadastro = {id:Date.now(), nUser:nUsuario, celLogin:celular, dataNasc:dtNasc, pass:sen, tipoCta:"user"};
-
-            ds.push(cadastro);
-
-            let json = JSON.stringify(ds);
-
-            localStorage.setItem("dados", json);
-
-            alert("Cadastro efetuado com sucesso!");
-            console.log("Sucesso!");
-
-            //Envia para a página de confirmação de telefone
-            //Envia código para o telefone
-            //Após o usuário digitar o código correto, redireciona para a página de login
-            //setTimeout(() => {
-                //window.location.href = "./login.html";
-                //}, 1000);
-
-        }
-        else {
-            alert(exist);
-            console.log(exist);
-            console.log(ds);
-    }
-
-    } 
-    else {
-        alert("É necessário concordar com os termos de serviço, as políticas de privacidade e as regras de conduta para prosseguir com o cadastro");
-        console.log("O cliente não marcou o checkbox");
-        limparCampos();
-    }
-
-}
-
-function validarLogin(usuario, senha, ds) {
-    // Impedir o recarregamento da página se for um evento de formulário
-    if (event && event.preventDefault) {
-        event.preventDefault();
-    }
-    for(let i=0;i<ds.length;i++){
-        if((usuario == ds[i].celLogin || usuario == ds[i].nUser) && senha == ds[i].pass) {
-            console.log("Validado");
-            //Salva os dados do usuário logado
-            sessionStorage.setItem("usuarioLogado", JSON.stringify(ds[i]));
-            return true;
-        }
-    }
-    
-    return "Usuário ou senha incorreto.";
-}
-
-
-function logon(event) {
-    // Impedir o recarregamento da página se for um evento de formulário
-    if (event && event.preventDefault) {
-        event.preventDefault();
-    }
-
-    //Inicializa dados se necessário
-    carregarDados();
-
-    //Puxa o banco de dados
-    let ds = JSON.parse(localStorage.getItem("dados"));
-
-    if(!ds){
-        alert("Erro ao carregar dados. Tente novamente.");
+// Valida os campos obrigatórios
+function validarCampos(nUsuario, local, tipo, desc, anonimo) {
+    if (!anonimo && !nUsuario) {
+        alert('Por favor, preencha o nome do usuário ou marque como anônimo.');
         return false;
     }
     
-    //Coleta os dados do form de login
-    let usuario = document.querySelector('#usuario').value.trim();
-    let senha = document.querySelector('#senha').value;
-    //valida os dados com o BD
-    const resultado = validarLogin(usuario, senha, ds);
-
-    if(resultado === true){
-        alert("Login efetuado com sucesso!");
-        window.location.href = "../../index.html";
-        return true;
-    }
-    else {
-        alert(resultado);
-        console.log(resultado, usuario, senha);
-        //limpa os campos se o login falhar
-        limparCampos();
+    if (!local) {
+        alert('Por favor, preencha a localização.');
         return false;
     }
-}
-
-//Função para verificar se o usuário está logado
-function verificarLogin(){
-    const usuarioLogado = sessionStorage.getItem("usuarioLogado");
-    if(!usuarioLogado){
-        window.location.href = "./public/Login/Logon.html";
-        return null;
+    
+    if (!tipo) {
+        alert('Por favor, selecione o tipo de denúncia.');
+        return false;
     }
-    return JSON.parse(usuarioLogado);
+    
+    if (!desc) {
+        alert('Por favor, preencha a descrição.');
+        return false;
+    }
+    
+    return true;
 }
 
-//Função para fazer logout
-function logout(){
-    sessionStorage.removeItem("usuarioLogado");
-    window.location.href = "./public/Login/Logon.html";
+// Cria um registro de denúncia
+function enviarDenuncia() {
+    // Impedir o recarregamento da página
+    if (event && event.preventDefault) {
+        event.preventDefault();
+    }
+
+    // Coleta os dados do formulário
+    const anonimo = document.querySelector('#check-anonimo').checked;
+    const nUsuario = anonimo ? 'Anônimo' : document.querySelector('#nome-usuario').value.trim();
+    const local = document.querySelector('#localizacao').value.trim();
+    const ident = document.querySelector('#identificacao').value.trim();
+    const tipo = document.querySelector('#tipo-denuncia').value;
+    const desc = document.querySelector('#descricao').value.trim();
+
+    // Valida os campos
+    if (!validarCampos(nUsuario, local, tipo, desc, anonimo)) {
+        return false;
+    }
+
+    // Cria o objeto de denúncia
+    const cadastroDenuncia = {
+        id: Date.now(),
+        nUser: nUsuario,
+        localizacao: local,
+        identificacao: ident,
+        tpDenuncia: tipo,
+        descricao: desc,
+        data: new Date().toLocaleString('pt-BR')
+    };
+
+    // Adiciona ao array
+    denunciaDados.push(cadastroDenuncia);
+
+    // Salva no localStorage
+    const json = JSON.stringify(denunciaDados);
+    localStorage.setItem("denuncias", json);
+
+    console.log("Denúncia cadastrada com sucesso!", cadastroDenuncia);
+
+    // Exibe alerta de sucesso
+    alertaDenuncia();
+
+    return false;
 }
+
+// Alerta de sucesso ao cadastrar denúncia
+function alertaDenuncia() {
+    // Verifica se SweetAlert2 está disponível
+    if (typeof Swal !== 'undefined') {
+        Swal.fire({
+            title: "Sucesso!",
+            text: "Denúncia cadastrada com sucesso!",
+            icon: "success",
+            confirmButtonColor: "#fe3f6c",
+        }).then((result) => {
+            // Limpa os campos
+            limparCampos();
+            // Atualiza a lista de denúncias
+            exibirDenuncias();
+        });
+    } else {
+        // Fallback caso SweetAlert2 não esteja disponível
+        alert("Denúncia cadastrada com sucesso!");
+        limparCampos();
+        exibirDenuncias();
+    }
+}
+
+// Exclui uma denúncia
+function excluirDenuncia(id) {
+    if (confirm('Tem certeza que deseja excluir esta denúncia?')) {
+        // Filtra o array removendo a denúncia com o ID especificado
+        denunciaDados = denunciaDados.filter(denuncia => denuncia.id !== id);
+        
+        // Atualiza o localStorage
+        const json = JSON.stringify(denunciaDados);
+        localStorage.setItem("denuncias", json);
+        
+        // Atualiza a exibição
+        exibirDenuncias();
+        
+        console.log(`Denúncia ${id} excluída com sucesso!`);
+    }
+}
+
+// Habilita/desabilita o campo de nome quando marcar anônimo
+document.addEventListener('DOMContentLoaded', () => {
+    carregarDenuncias();
+    
+    const checkAnonimo = document.querySelector('#check-anonimo');
+    const nomeUsuario = document.querySelector('#nome-usuario');
+    
+    if (checkAnonimo && nomeUsuario) {
+        checkAnonimo.addEventListener('change', function() {
+            if (this.checked) {
+                nomeUsuario.value = '';
+                nomeUsuario.disabled = true;
+                nomeUsuario.placeholder = 'Denúncia anônima';
+            } else {
+                nomeUsuario.disabled = false;
+                nomeUsuario.placeholder = '@Novousuario123';
+            }
+        });
+    }
+});
