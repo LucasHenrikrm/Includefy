@@ -25,16 +25,17 @@
         <h1 class="titulo">Crie uma nova comunidade</h1>
         <hr>
         <div class="formulario">
+            <div class="bloco-obrigatorio" style="margin-top: 10px;"><span class="obrigatorio" style="margin-left: 10px; padding-top: 20px;">*</span><span></span>Obrigatório</span></div>
             <div class="input-group form-input">
-                <span class="input-group-text">Nome do criador:</span>
+                <span class="input-group-text">Nome do criador:<span class="obrigatorio" title="Obrigatório">*</span></span>
                 <input type="text" class="form-control input-box" id="nome-usuario" placeholder="@Novousuario123" required>
             </div>
             <div class="input-group form-input">
-                <span class="input-group-text">Nome da comunidade:</span>
+                <span class="input-group-text">Nome da comunidade:<span class="obrigatorio" title="Obrigatório">*</span></span>
                 <input type="text" class="form-control input-box" id="tit-comunidade" placeholder="Ordem Paranormal" required>
             </div>
             <div class="input-group form-input">
-                <span class="input-group-text">Categoria:</span>
+                <span class="input-group-text">Categoria:<span class="obrigatorio" title="Obrigatório">*</span></span>
                 <select name="" class="form-select input-box" id="tipo-comunidade" required>
                     <option selected value="">Artesanato</option>
                     <option value="">Bares</option>
@@ -45,7 +46,7 @@
                 </select>
             </div>
             <div class="input-group form-input">
-                <span class="input-group-text">Tipo:</span>
+                <span class="input-group-text">Tipo:<span class="obrigatorio" title="Obrigatório">*</span></span>
                 <select name="" class="form-select input-box" id="tipo-publico" required>
                     <option selected value="">Público</option>
                     <option value="">Privado</option>
@@ -56,7 +57,7 @@
                 <input type="file" class="form-control input-box" id="multimidia">
             </div>
             <div class="input-group form-input">
-                <span class="input-group-text">Descrição:</span>
+                <span class="input-group-text">Descrição:<span class="obrigatorio" title="Obrigatório">*</span></span>
                 <textarea class="form-control input-box" rows="10" id="descricao" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary botao-enviar" onclick="criarComunidade()">Criar</button>

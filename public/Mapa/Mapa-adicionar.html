@@ -25,21 +25,22 @@
         <h1 class="titulo">Cadastre novos locais</h1>
         <hr>
         <div class="formulario">
+            <div class="bloco-obrigatorio" style="margin-top: 10px;"><span class="obrigatorio" style="margin-left: 10px; padding-top: 20px;">*</span><span></span>Obrigatório</span></div>
             <div class="input-group form-input">
-                <span class="input-group-text">Nome do usuário:</span>
-                <input type="text" class="form-control input-box" placeholder="@Novousuario123">
+                <span class="input-group-text">Nome do usuário:<span class="obrigatorio" title="Obrigatório">*</span></span>
+                <input type="text" class="form-control input-box" placeholder="@Novousuario123" required>
             </div>
             <div class="input-group form-input">
-                <span class="input-group-text">Nome do local ou serviço:</span>
-                <input type="text" class="form-control input-box" placeholder="Assistência Black White">
+                <span class="input-group-text">Nome do local ou serviço:<span class="obrigatorio" title="Obrigatório">*</span></span>
+                <input type="text" class="form-control input-box" placeholder="Assistência Black White" required>
             </div>
             <div class="input-group form-input">
-                <span class="input-group-text">Localização:</span>
-                <input type="text" class="form-control input-box" placeholder="Rua Europa, 04 - Taboão, São Bernardo do Campo, 09668-050">
+                <span class="input-group-text">Localização:<span class="obrigatorio" title="Obrigatório">*</span></span>
+                <input type="text" class="form-control input-box" placeholder="Rua Europa, 04 - Taboão, São Bernardo do Campo, 09668-050" required>
             </div>
             <div class="input-group form-input">
-                <span class="input-group-text">Categoria:</span>
-                <select name="" class="form-select input-box" id="">
+                <span class="input-group-text">Categoria:<span class="obrigatorio" title="Obrigatório">*</span></span>
+                <select name="" class="form-select input-box" id="" required>
                     <option selected>Todas as categorias</option>
                     <option value="">Gastronomia</option>
                     <option value="">Compras</option>
@@ -56,8 +57,8 @@
                 </select>
             </div>
             <div class="input-group form-input">
-                <span class="input-group-text">Descrição:</span>
-                <textarea class="form-control input-box" rows="10"></textarea>
+                <span class="input-group-text">Descrição:<span class="obrigatorio" title="Obrigatório">*</span></span>
+                <textarea class="form-control input-box" rows="10" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary botao-enviar" onclick="cadastrarLocal()">Enviar</button>
         </div>

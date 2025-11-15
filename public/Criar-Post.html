@@ -25,8 +25,9 @@
         <h1 class="titulo">Crie um novo post</h1>
         <hr>
         <div class="formulario">
+            <div class="bloco-obrigatorio" style="margin-top: 10px;"><span class="obrigatorio" style="margin-left: 10px; padding-top: 20px;">*</span><span></span>Obrigatório</span></div>
             <div class="input-group form-input">
-                <span class="input-group-text">Título:</span>
+                <span class="input-group-text">Título:<span class="obrigatorio" title="Obrigatório">*</span></span>
                 <input type="text" class="form-control input-box" id="nome-usuario" placeholder="O que aconteceu hoje?" required>
             </div>
 
@@ -35,7 +36,7 @@
                 <input type="file" class="form-control input-box" id="multimidia">
             </div>
             <div class="input-group form-input">
-                <span class="input-group-text">Texto do post:</span>
+                <span class="input-group-text">Texto do post:<span class="obrigatorio" title="Obrigatório">*</span></span>
                 <textarea class="form-control input-box" rows="10" id="descricao" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary botao-enviar" onclick="criarPost()">Criar</button>

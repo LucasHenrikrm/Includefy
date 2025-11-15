@@ -26,17 +26,18 @@
         <h1 class="titulo">Avaliar um local ou um serviço</h1>
         <hr>
         <div class="formulario">
+            <div class="bloco-obrigatorio" style="margin-top: 10px;"><span class="obrigatorio" style="margin-left: 10px; padding-top: 20px;">*</span><span></span>Obrigatório</span></div>
             <div class="input-group form-input">
-                <span class="input-group-text">Nome do usuário:</span>
-                <input type="text" class="form-control input-box" placeholder="@Novousuario123">
+                <span class="input-group-text">Nome do usuário:<span class="obrigatorio" title="Obrigatório">*</span></span>
+                <input type="text" class="form-control input-box" placeholder="@Novousuario123" required>
             </div>
             <div class="input-group form-input">
-                <span class="input-group-text">Nome do local ou serviço:</span>
-                <input type="text" class="form-control input-box" placeholder="Assistência Black White">
+                <span class="input-group-text">Nome do local ou serviço:<span class="obrigatorio" title="Obrigatório">*</span></span>
+                <input type="text" class="form-control input-box" placeholder="Assistência Black White" required>
             </div>
             <div class="input-group form-input">
-                <span class="input-group-text">Categoria:</span>
-                <select name="" class="form-select input-box" id="">
+                <span class="input-group-text">Categoria:<span class="obrigatorio" title="Obrigatório">*</span></span>
+                <select name="" class="form-select input-box" id="" required>
                     <option selected>Todas as categorias</option>
                     <option value="">Gastronomia</option>
                     <option value="">Compras</option>
@@ -53,7 +54,7 @@
                 </select>
             </div>
             <div class="input-group form-input">
-                <span class="input-group-text">Avaliação:</span>
+                <span class="input-group-text">Avaliação:<span class="obrigatorio" title="Obrigatório">*</span></span>
                 <div class="star-rating animated-stars" style="margin-left: 5px;">
                     <input type="radio" id="star5" name="rating" value="5">
                     <label for="star5" class="bi bi-star-fill"></label>
