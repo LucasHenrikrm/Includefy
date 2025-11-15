@@ -21,7 +21,7 @@
     margin: auto;
     padding: 20px 0;
     font-family: var(--calibri);
-    margin-top: 75px;
+    margin-top: 125px;
 }
 
 #criar-comunidades {
@@ -215,4 +215,3 @@ h3 {
     align-content: flex-end;
     margin-left: 15px;
 }
-
