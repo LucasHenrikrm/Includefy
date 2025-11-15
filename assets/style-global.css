@@ -75,7 +75,7 @@
     padding-left: 40px;
     padding-right: 40px;
     margin: 0px;
-    box-shadow: 0 0 0 3px var(--cor-preto2) inset; 
+    box-shadow: 0 0 0 2px var(--cor-preto2) inset; 
     align-items: center;
     gap:5px;
     
@@ -118,7 +118,7 @@
     left: 0;
 
     background-color: var(--cor-branco);
-    box-shadow: 0 0 0 3px var(--cor-preto2) inset;
+    box-shadow: 0 0 0 2px var(--cor-preto2) inset;
     overflow-x: hidden;
     transition: 0.5s;
 
@@ -188,4 +188,5 @@
 
 .tooltip:hover .tooltip-text {
     visibility: visible;
+
 }
