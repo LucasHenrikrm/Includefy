@@ -21,7 +21,7 @@
     margin: auto;
     padding: 20px 0;
     font-family: var(--calibri);
-    margin-top: 75px;
+    margin-top: 125px;
 }
 
 #criar-comunidades {
@@ -200,6 +200,11 @@ h3 {
     gap: 25px;
     margin-top: 20px;
     cursor: pointer;
+    width: 100%;
+}
+
+.acoes1 {
+    width: 100%;
 }
 
 .acoes1 span {
@@ -208,11 +213,11 @@ h3 {
 }
 
 .acoes2 {
-    margin-left: 65%;
+    margin-right: -68%;
+    width: 100%;
 }
 
 .acoes2 img{
     align-content: flex-end;
     margin-left: 15px;
 }
-
