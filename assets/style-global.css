@@ -174,3 +174,18 @@
 .menu-icon {
     max-width: 30px;
 }
+
+
+.tooltip-text {
+    visibility: hidden;
+    border: 1px solid var(--cor-preto2);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 5px 0px;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+}
