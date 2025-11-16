@@ -6,20 +6,23 @@ html, body {
     min-height: 100%;
 }
 
+/*Aumenta a margem superior para não ser coberta pelo menu*/
 .container-bloco {
     margin-top: 60px;
 }
 
+/*Personaliza o troca-troca(abas de post)*/
 .nav-home {
     display: flex;
     width: 100%;
 }
+
 .link-home {
     font-weight: 600;
     font-size: 16px;
     background-color: var(--cor-branco);
     color: var(--cor-preto);
-    box-shadow: 0 0 0 2px var(--cor-detalhe) inset;
+    box-shadow: 0 0 0 2px var(--cor-preto2) inset;
 
     height: 30px;
     width: 100%;
@@ -47,7 +50,7 @@ html, body {
     margin:20px;
     margin-left:160px;
     margin-right:160px;
-    box-shadow: 0 0 0 2px var(--cor-detalhe) inset;
+    box-shadow: 0 0 0 2px var(--cor-preto2) inset;
     overflow: hidden;
     position: relaive;
     height: calc(100 vh - 75px);
