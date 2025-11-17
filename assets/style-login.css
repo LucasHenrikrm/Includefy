@@ -2,10 +2,12 @@
 :root {
     /*Cores*/
     --cor-detalhe: #fe3f6c;
-    --cor-detalhe2: #fe3f6c27;
-    --cor-detalhe3: #FF91C1;
+    --cor-hover: #fe7f9d49;
+    --cor-ativa: #740002;
     --cor-branco: #FFF;
     --cor-preto: #000000d2;
+    --cor-preto2: #00000098; /*Cor das bordas*/
+    --cor-preto3: #000000d3;
     --cor-fundo: #D9D9D9;
 
     /*Fontes*/
@@ -27,7 +29,7 @@ h1 {
     margin: auto;
     padding: 25px;
     background-color: var(--cor-fundo);
-    border: 3px solid var(--cor-detalhe);
+    border: 3px solid var(--cor-preto2);
     width: 70%;
 }
 
@@ -36,14 +38,14 @@ h1 {
 }
 
 .formulario input {
-    background-color: var(--cor-detalhe2);
+    background-color: var(--cor-hover);
     height: 50px;
     margin-bottom: 10px;
-    border: var(--cor-detalhe2);
 }
 
 .formulario input:focus {
     box-shadow: 0px 0px 5px var(--cor-detalhe);
+    border: var(--cor-hover);
 }
 
 .formulario input:invalid{
@@ -90,5 +92,5 @@ p {
 }
 
 #botao-cadastrar:hover {
-    background-color: var(--cor-detalhe3);
+    background-color: var(--cor-hover);
 }
