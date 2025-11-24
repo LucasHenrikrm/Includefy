@@ -40,3 +40,7 @@ Neste projeto utilizamos tecnologias como HTML5, CSS3, Bootstrap, JSON e JavaScr
 <img width="54px" height="54px"  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />    
 <div> 
 <th>
+
+### 🎞️ Prévia em vídeo da utilização do site
+https://github.com/user-attachments/assets/adacef60-c73c-4334-a8a8-4bf4faa8d997
+
